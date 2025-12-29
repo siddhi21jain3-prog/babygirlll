@@ -1,0 +1,147 @@
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffe4e1; /* Pinterest-like cute background */
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== SCREEN CONTAINER ===== */
+.screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 12px 25px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 25px;
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* ===== COUPON ===== */
+.coupon {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.coupon h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.coupon-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.coupon p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.coupon-footer {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== SLIDESHOW ===== */
+.slide-img {
+  width: 250px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.caption {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ===== HEARTS ===== */
+.heart {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: red;
+  transform: rotate(45deg);
+  animation: floatUp linear forwards;
+  z-index: 999;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before { top: -7px; left: 0; }
+.heart::after { left: 7px; top: 0; }
+
+@keyframes floatUp {
+  0% {
+    transform: rotate(45deg) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+/* ===== CONFETTI ===== */
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  border-radius: 50%;
+  animation: fall 3s linear forwards;
+  z-index: 1000;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* ===== VIDEO ===== */
+video {
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== FINAL KISS SCREEN ===== */
+.final h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.final p {
+  font-size: 18px;
+}
